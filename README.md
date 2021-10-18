@@ -28,7 +28,7 @@ secretmem 存储敏感数据与使用tpm、sgx、amd SME比较：
 向底版本内核移植的改变：
 
         1. secretmem在kernel v5.14 中是引入一个新系统调用。在 v5.4.0.89 和 v4.18.0-305.10.2.el8中是为 memfd_create
-	   增加一个参数MFD_SECRET实现。
+	   增加一个参数MFD_SECRET实现。增加启动参数secretmem=1，开启该功能，默认不开启。
         2. 更低的版本，例如 3.10.0（centos7），由于内核代码变化大，需要修改的多，可能移植失败。
 
 
