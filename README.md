@@ -1,16 +1,16 @@
 secretmem
 
 	从kernel v5.14.7 移植 secretmem功能。
- 
-	Ubuntu: kernel v5.4.0.89 
 
+	Ubuntu: kernel v5.4.0.89
+ 
 	CentOS8: kernel v4.18.0-305.10.2.el8
 
 
 什么是secretmem：
 
        secretmem是kernel v5.14.7 加入的一个申请 "secret memory"的功能，应用程序通过新引入的系统调用memfd_secret使用该功能。
-        
+
        "secret memory"的目标： 1. 除了程序本身可以访问该内存，其他应用都不可以。
 
                                2. 内核也不可以。
@@ -28,7 +28,7 @@ secretmem 存储敏感数据相比较使用tpm、sgx、amd SME的优点：
 
         3. 使用简单。
 
-        缺点： 理论上，安全性没有使用硬件上高。但配合系统的其他安全功能, 可是满足很多使用场景的需求。
+        缺点： 理论上，安全性没有使用硬件高。但配合系统的其他安全功能, 可是满足很多使用场景的需求。
 
 
 向底版本内核移植的改变：
