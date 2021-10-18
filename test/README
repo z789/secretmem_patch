@@ -1,0 +1,18 @@
+
+第一个窗口： 
+  ./testapp
+
+ID: 4526
+Copied 13 bytes to secret area 0x7f619458c000
+data:
+Waiting...
+
+
+第二个窗口
+gdb -p 4526
+
+(gdb) dump binary memory ./memfile 0x7f619458c000 0x7f619458c000+16
+Cannot access memory at address 0x7f619458c000
+(gdb) 
+
+可以看到不能dump "secret memory"地址 0x7f619458c000
